@@ -35,21 +35,6 @@ main {
 	margin: 0 auto;
 }
 
-fieldset {
-	margin: 1rem 0 2rem;
-	padding: 0;
-	border: none;
-}
-
-legend {
-	padding-left: 0;
-	font-size: 1.25rem;
-	font-weight: 500;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	margin-bottom: 1rem;
-}
-
 .center {
 	text-align: center;
 }
@@ -106,5 +91,17 @@ sup {
 }
 
 .form-actions {
+	margin-top: var(--double-spacing);
 	margin-bottom: 4rem;
+}
+
+.image-preview {
+	display: block;
+	max-width: 100%;
+	border: 2px solid black;
+}
+
+.image-preview[src="#"] {
+	border: 0;
+	border-bottom: 2px solid black;
 }

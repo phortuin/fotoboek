@@ -5,25 +5,17 @@
 
 {% block content %}
 <header>
-	Upload photo here!<br>
-	Or, <a href="/photos/">See your photos &rarr;</a>
+	<h1>Fotoboek</h1>
 </header>
 
 <form name="upload" method="post" action="/photos" enctype="multipart/form-data" onsubmit="document.getElementById('savebutton').disabled = 'disabled'; document.getElementById('savebutton').innerText = 'Uploading photo...'">
-	<fieldset>
-		<legend>Upload file</legend>
-		{{ inputFile('photo', 'Choose photo from disk', 'required') }}
-		{{ inputText('date', 'Date and time taken (will be prefilled)', 'datetime-local', 'required') }}
-	</fieldset>
-	<fieldset>
-		<legend>Optional details</legend>
-		{{ inputText('credit', 'Photo credit', 'text') }}
-		{{ inputText('caption', 'Caption', 'text') }}
-	</fieldset>
+	<input type="hidden" name="date" id="date">
+	<img src="#" id="photopreview" alt="" class="image-preview">
+	{{ inputFile('photo', 'Choose photo from disk', 'required') }}
+	{{ inputText('caption', 'Caption', 'text') }}
+	{{ inputText('credit', 'Photo credit', 'text') }}
 	<div class="form-actions">
-		<button id="savebutton" class="button" type="submit">Save photo</button>
-		<p>Clicking ‘Save photo’ will upload your photo &amp; add your info to the database. Uploading can take a while; no progress is shown.</p>
-		<p>Privacy disclaimer: image files are stored with <a tabindex="-1" href="https://cloudinary.com">Cloudinary</a> in the United States, everything else is stored with <a tabindex="-1" href="https://mlab.com">mLab</a> in Ireland.<br><br></p>
+		<button id="savebutton" class="button" type="submit">Save photo</button>&nbsp; or <a href="/photos/">manage your photos &rarr;</a>
 	</div>
 </form>
 {% endblock %}

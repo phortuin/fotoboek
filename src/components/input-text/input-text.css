@@ -1,10 +1,6 @@
 .input-text,
 .input-file {
 	position: relative;
-	margin-bottom: 1rem;
-}
-
-.input-text:last-child {
 	margin-bottom: 0;
 }
 
@@ -19,14 +15,21 @@
 
 .input-text input,
 .input-file__filename {
-	height: 3.75rem;
+	height: 4rem;
 	padding-top: 1.25rem;
 	padding-left: 0.625rem;
 	border: 0;
 	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
 	outline: 0;
 	background: transparent;
 	font-size: 1.25em;
+}
+
+.input-text input:first-chlid,
+.input-file__filename:first-child {
+	border-top: 2px solid black;
 }
 
 .input-text input:focus,
