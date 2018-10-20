@@ -1,0 +1,4 @@
+@import 'components/core/_core.css';
+@import 'components/input-text/input-text.css';
+@import 'components/input-file/input-file.css';
+@import 'components/input-radios/input-radios.css';

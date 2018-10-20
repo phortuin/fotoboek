@@ -1,0 +1,18 @@
+{% macro inputFile(name, label, required = false) %}
+	<div class="input-file form-input">
+		<input
+			class="input-file__input a11y-sr-only"
+			type="file"
+			name="{{ name }}"
+			id="{{ name }}"
+			onchange="document.getElementById('{{ name }}_filename').innerText = this.value.split('\\').pop()"
+			{% if required %} required {% endif %}>
+		<div
+			class="input-file__filename"
+			id="{{ name }}_filename"
+			></div>
+		<label
+			class="input-file__label"
+			for="{{ name }}">{{ label }}</label>
+	</div>
+{% endmacro %}

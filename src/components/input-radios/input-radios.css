@@ -1,0 +1,17 @@
+.input-radios {
+	margin-bottom: 0;
+}
+
+.input-radios__title {
+	font-size: 1rem;
+}
+
+.input-radios .input-radio {
+	display: inline-block;
+}
+
+.input-radios .input-radio__input,
+.input-radios .input-radio__label {
+	display: inline-block;
+	width: auto;
+}

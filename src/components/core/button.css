@@ -1,0 +1,17 @@
+.button {
+	padding: 0.5em 1em;
+	border: none;
+	outline: none;
+	background-color: var(--blue);
+	color: white;
+	font-size: 1.25em;
+	border-radius: 0.125em;
+	-webkit-font-smoothing: antialiased;
+	cursor: pointer;
+}
+
+.button[disabled] {
+	background-color: var(--light-grey);
+	color: var(--dark-grey);
+	-webkit-font-smoothing: subpixel-antialiased;
+}

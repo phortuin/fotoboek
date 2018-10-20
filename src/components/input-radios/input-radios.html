@@ -1,0 +1,15 @@
+{% macro inputRadios(legend, radios) %}
+	<fieldset class="input-radios">
+		<legend class="input-radios__title">{{ legend }}</legend>
+		{% for radio in radios %}
+		{{ inputRadio(radio.name, radio.label, radio.id, radio.required) }}
+		{% endfor %}
+	</fieldset>
+{% endmacro %}
+
+{% macro inputRadio(name, label, id, required = false) %}
+	<div class="input-radio">
+		<input class="input-radio__input" type="radio" name="{{ name }}" id="{{ id }}" {% if required %} required {% endif %}>
+		<label class="input-radio__label" for="{{ id }}">{{ label }}</label>
+	</div>
+{% endmacro %}

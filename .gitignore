@@ -1,0 +1,28 @@
+# vendor packages
+node_modules
+
+# project meta
+.idea
+.settings
+*.sublime-project
+*.sublime-workspace
+.vscode
+
+# npm cruft
+npm-debug.log
+
+# cupertino / redmond cruft
+.DS_Store
+Thumbs.db
+
+# environment variables
+.env
+
+# commercial fonts
+*.otf
+*.ttf
+*.woff
+*.woff2
+
+# dist
+dist

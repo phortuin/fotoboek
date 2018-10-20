@@ -1,0 +1,23 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = true
+
+# Don't trim whitespace because of double space <br/> thing in Markdown
+[*.md]
+trim_trailing_whitespace = false
+
+# YAML & JSON prefer 2 spaces
+[*.{yml,json}]
+indent_style = space
+indent_size = 2
+
+# Lint settings are in JSON, so
+[.eslintrc]
+indent_style = space
+indent_size = 2

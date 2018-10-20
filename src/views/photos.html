@@ -1,0 +1,11 @@
+{% extends "views/_base.html" %}
+
+{% block content %}
+{% for photo in photos %}
+<figure id="{{ photo.id }}">
+	<img src="{{ photo.url }}" width="100%">
+	<figcaption>Taken on {{ photo.date }} by {{ photo.credit }}<br><br><em>{{ photo.caption }}</em></figcaption>
+</figure>
+<br><br>
+{% endfor %}
+{% endblock %}

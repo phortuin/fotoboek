@@ -1,0 +1,17 @@
+.input-file__filename {
+	padding-top: 1.75rem;
+}
+
+.input-file__label {
+	height: 100%;
+}
+
+.input-file__label,
+.input-file__filename {
+	cursor: pointer;
+}
+
+.input-file__filename {
+	word-break: break-word;
+	overflow-y: hidden;
+}

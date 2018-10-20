@@ -1,0 +1,110 @@
+@import './variables.css';
+@import './button.css';
+
+* {
+	box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button,
+body {
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Verdana, sans-serif;
+  line-height: 1.45;
+  font-size: 1em;
+  color: #231f20;
+  font-feature-settings: "kern", "liga";
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.a11y-sr-only {
+  overflow: hidden;
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+main {
+	max-width: 30rem;
+	margin: 0 auto;
+}
+
+fieldset {
+	margin: 1rem 0 2rem;
+	padding: 0;
+	border: none;
+}
+
+legend {
+	padding-left: 0;
+	font-size: 1.25rem;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+.center {
+	text-align: center;
+}
+
+.center-center {
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-input {
+	margin-bottom: 0;
+}
+
+.form-input label,
+.form-input input {
+	display: block;
+	width: 100%;
+}
+
+header {
+	margin: 2rem 0;
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+figure {
+	display: block;
+	margin: 0;
+}
+
+figure img {
+	max-width: 100%;
+}
+
+a {
+	color: #4a49eb;
+}
+
+a[href^="http"]:after {
+	content: "↗";
+}
+
+sup {
+	line-height: 1;
+}
+
+.form-actions {
+	margin-bottom: 4rem;
+}

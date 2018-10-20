@@ -1,0 +1,14 @@
+{% extends "views/_base.html" %}
+
+{% block content %}
+<div class="center-center">
+	<p>
+		Photo has been saved! 🎉<br>
+		Credit: {{ credit }}
+		Caption: {{ caption }}
+		Date: {{ date }}
+		URL: {{ url }}
+		<a href="/">Upload moar &larr;</a> or <a href="/photos/#{{ _id }}">See your photo &rarr;</a>
+	</p>
+</div>
+{% endblock %}
