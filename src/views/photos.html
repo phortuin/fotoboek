@@ -5,7 +5,14 @@
 <figure id="{{ photo.id }}">
 	<img src="{{ photo.url }}" width="100%">
 	<figcaption>Taken on {{ photo.date }} by {{ photo.credit }}<br><br><em>{{ photo.caption }}</em></figcaption>
+	<form method="post" action="/photos/{{ photo.id }}">
+		<input type="hidden" name="_method" value="delete">
+		<button class="button" type="submit">&uarr; Delete this entry</button>
+	</form>
 </figure>
 <br><br>
+{% else %}
+<h1>NOTHING</h1>
+<a href="/">&larr; Out of here</a>
 {% endfor %}
 {% endblock %}

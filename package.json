@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "bluebird": "3.5.2",
-    "body-parser": "1.18.3",
     "buble": "0.19.5",
     "cloudinary": "1.11.0",
     "dotenv-safe": "6.1.0",

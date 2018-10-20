@@ -13,8 +13,8 @@ const upload = multer()
 const app = express()
 
 app.use(mongoSanitize())
-// app.use(bodyParser.urlencoded({ extended: true }))
-// app.use(require('@lib/parse-method')) // Parses _method parameters to req.method
+app.use(express.urlencoded({ extended: true }))
+app.use(require('@lib/parse-method')) // Parses _method parameters to req.method
 app.set('etag', false)
 app.use((req, res, next) => { // Remove shameless plug
 	res.removeHeader('X-Powered-By')
