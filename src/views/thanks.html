@@ -4,11 +4,11 @@
 <div class="center-center">
 	<p>
 		Photo has been saved! 🎉<br>
-		{% if credit %}Credit: {{ credit }}{% endif %}
-		{% if caption %}Caption: {{ caption }}{% endif %}
+		{% if credit %}Credit: {{ credit }}<br>{% endif %}
+		{% if caption %}Caption: {{ caption }}<br>{% endif %}
 		Date: {{ date }}<br>
 		URL: <a href="{{ url }}">{{ url }}</a><br><br>
-		<img src="{{ url }}" width="100%">
+		<img src="{{ url }}" style="max-width: 100%; max-height: 40vh;">
 		<a href="/">Upload moar &larr;</a> or <a href="/photos/#{{ _id }}">See your photo &rarr;</a>
 	</p>
 </div>
