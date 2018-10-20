@@ -11,21 +11,19 @@
 
 <form name="upload" method="post" action="/photos" enctype="multipart/form-data" onsubmit="document.getElementById('savebutton').disabled = 'disabled'; document.getElementById('savebutton').innerText = 'Uploading photo...'">
 	<fieldset>
-		<legend>About your photo</legend>
-		<p>Your personal information is stored in a 3<sup>rd</sup> party database (<a tabindex="-1" href="https://mlab.com">mLab</a>) in Ireland.<br><br></p>
-		{{ inputText('credit', 'Photo credit', 'text') }}
-		{{ inputText('caption', 'Caption', 'text') }}
-		{{ inputText('date', 'Date taken', 'date', 'required') }}
+		<legend>Upload file</legend>
+		{{ inputFile('photo', 'Choose photo from disk', 'required') }}
+		{{ inputText('date', 'Date and time taken (will be prefilled)', 'datetime-local', 'required') }}
 	</fieldset>
 	<fieldset>
-		<legend>Upload time!</legend>
-		<p>Photos are stored on a 3<sup>rd</sup> party cloud service (<a tabindex="-1" href="https://cloudinary.com">Cloudinary</a>) in the United States.<br><br></p>
-
-		{{ inputFile('photo', 'Choose photo from disk', 'required') }}
+		<legend>Optional details</legend>
+		{{ inputText('credit', 'Photo credit', 'text') }}
+		{{ inputText('caption', 'Caption', 'text') }}
 	</fieldset>
 	<div class="form-actions">
-		<p>Clicking ‘Save photo’ will upload your photo &amp; add your info to the database. Uploading can take a while; no progress is shown. Hold tight!</p>
 		<button id="savebutton" class="button" type="submit">Save photo</button>
+		<p>Clicking ‘Save photo’ will upload your photo &amp; add your info to the database. Uploading can take a while; no progress is shown.</p>
+		<p>Privacy disclaimer: image files are stored with <a tabindex="-1" href="https://cloudinary.com">Cloudinary</a> in the United States, everything else is stored with <a tabindex="-1" href="https://mlab.com">mLab</a> in Ireland.<br><br></p>
 	</div>
 </form>
 {% endblock %}

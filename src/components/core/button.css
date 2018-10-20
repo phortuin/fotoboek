@@ -1,5 +1,5 @@
 .button {
-	padding: 0.5em 1em;
+	padding: var(--half-spacing) var(--default-spacing);
 	border: none;
 	outline: none;
 	background-color: var(--blue);
@@ -14,4 +14,8 @@
 	background-color: var(--light-grey);
 	color: var(--dark-grey);
 	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+.button + p {
+	margin-top: var(--double-spacing);
 }
