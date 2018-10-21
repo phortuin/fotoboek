@@ -78,6 +78,10 @@ figure img {
 	max-width: 100%;
 }
 
+figcaption {
+	margin-bottom: var(--double-spacing);
+}
+
 a {
 	color: #4a49eb;
 }

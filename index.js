@@ -1,5 +1,6 @@
 require('dotenv-safe').config()
 require('module-alias/register')
+require('moment-timezone').tz.setDefault('Europe/Amsterdam')
 
 const express = require('express')
 const bodyParser = require('body-parser')
