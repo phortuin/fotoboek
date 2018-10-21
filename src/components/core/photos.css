@@ -1,0 +1,13 @@
+.photos__figure {
+	font-family: "IBM Plex Serif";
+}
+
+.photos__date {
+	text-transform: capitalize;
+}
+
+.photos__figcaption{
+	display: flex;
+	justify-content: space-between;
+	margin-top: var(--half-spacing);
+}

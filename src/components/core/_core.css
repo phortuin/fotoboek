@@ -1,5 +1,6 @@
 @import './variables.css';
 @import './button.css';
+@import './photos.css';
 
 * {
 	box-sizing: border-box;

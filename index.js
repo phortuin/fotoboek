@@ -28,6 +28,7 @@ app.get('/', require('@routes/index'))
 app.use('/photos', upload.fields([
 		{ name: 'photo' },
 	]), require('@routes/photos'))
+app.use('/preview', require('@routes/preview'))
 app.use(express.static('dist/'));
 app.use(require('@routes/error'))
 app.use(require('@routes/not-found'))
