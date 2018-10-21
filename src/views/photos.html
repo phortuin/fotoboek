@@ -5,8 +5,8 @@
 <figure id="{{ photo.id }}">
 	<img src="{{ photo.url }}" width="100%">
 	<figcaption>
-		<p><em>{{ photo.date | dateDMY }}</em>
-		{{ photo.caption | markdown }}
+		<em>{{ photo.date | dateDMY }}</em>
+		{{ photo.caption | markdown | safe }}
 	</figcaption>
 	<form method="post" action="/photos/{{ photo.id }}">
 		<input type="hidden" name="_method" value="delete">
