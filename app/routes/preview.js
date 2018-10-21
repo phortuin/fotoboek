@@ -3,6 +3,6 @@ const renderer = require('@lib/renderer');
 
 module.exports = (req, res, next) => {
 	Photo.find().sort({ date: -1 }).exec()
-		.then(photos => res.send(renderer.render(res.locals.template || 'views/preview.html', { photos })))
+		.then(photos => res.send(renderer.render('views/preview.html', { photos })))
 		.catch(next)
 }
