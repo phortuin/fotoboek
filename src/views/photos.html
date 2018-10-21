@@ -4,7 +4,7 @@
 {% for photo in photos %}
 <figure id="{{ photo.id }}">
 	<img src="{{ photo.url }}" width="100%">
-	<figcaption>Taken on {{ photo.date }} by {{ photo.credit }}<br><br><em>{{ photo.caption }}</em></figcaption>
+	<figcaption>{{ photo.date }}<br><br><em>{{ photo.caption }}</em></figcaption>
 	<form method="post" action="/photos/{{ photo.id }}">
 		<input type="hidden" name="_method" value="delete">
 		<button class="button" type="submit">&uarr; Delete this entry</button>
